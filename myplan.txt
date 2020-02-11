@@ -1,0 +1,206 @@
+1. 
+Task: Create a class ClassBuilder, which will create other objects to parse JSON file and generate source code.
+Estimated Time: 10 min
+Target Deadline: Jan 28
+Actual Time: 5 min
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: Just a start.
+
+2. 
+Task: Write a class FieldBuilder that will interpret fields of classes in JSON file.
+Estimated Time: 10 min
+Target Deadline: Jan 28
+Actual Time: 5 min
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: Easy.
+
+3.
+Task: Add a method buildOneField (in FieldBuilder) that takes a JSONObject and generate a string, which represents one field.
+Estimated Time: 20 min
+Target Deadline: Jan 28
+Actual Time: 15 min
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: It takes me some time to understand the requirements, but not vey long.
+
+4. 
+Task: Add a method buildAllFields (in FieldBuilder) that takes a JSONArray (in which are several JSONObjects) and generate a string, which represents all the fields.
+Estimated Time: 20 min
+Target Deadline: Jan 28
+Actual Time: 15 min
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: Just a loop, which builds all fields.
+
+5. 
+Task: Write a class JSONReader that takes a pathname and generate a JSONArray, which represents all classes in the JSON file.
+Estimated Time: 1 hour
+Target Deadline: Jan 29
+Actual Time: 1 hour
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: Read files in JAVA is quite different with C++...
+
+6. 
+Task: Add a method getClassNames (in ClassBuilder) that takes a JSONArray and returns an ArrayList<String>, which stores all the class names.
+Estimated Time: 30 min
+Target Deadline: Jan 29
+Actual Time: 20 min
+Actual Delivery: Jan 29
+Commit ID: 80b7f69fba33898bc40851c917c40189f5fd989d
+Comments: I maintain a HashMap as a field of ClassBuilder. Quite fast.
+
+7. 
+Task: Write a class MethodBuilder, which will generate source code of methods.
+Estimated Time: 10 min
+Target Deadline: Jan 30
+Actual Time: 5 min
+Actual Delivery: Jan 30
+Commit ID: 1f1fb90b75c8704bf42a2ffd211e58c21a412c18
+Comments: Easy.
+
+8. 
+Task: Add a method buildGetX (in MethodBuilder) that takes a string (name of a field "X") and generates source code for "getX".
+Estimated Time: 20 min
+Target Deadline: Jan 30
+Actual Time: 10 min
+Actual Delivery: Jan 30
+Commit ID: 1f1fb90b75c8704bf42a2ffd211e58c21a412c18
+Comments: Just hardcode work with a little complexity.
+
+9. 
+Task: Add a method buildSetX (in MethodBuilder) that takes a string (name of a field "X") and generates source code for "setX".
+Estimated Time: 20 min
+Target Deadline: Jan 30
+Actual Time: 5 min
+Actual Delivery: Jan 30
+Commit ID: 1f1fb90b75c8704bf42a2ffd211e58c21a412c18
+Comments: Same as above.
+
+10. 
+Task: Add a method buildArrayField (in FieldBuilder) that takes a JSONObject of an array and generates source code of that array. The array might be nested, so recursion is necessary.
+Estimated Time: 1 hour
+Target Deadline: Jan 30
+Actual Time: 20 min
+Actual Delivery: Jan 30
+Commit ID: 60e5077b42c755aced5b9d5a6c95c8edcff046b1
+Comments: I thought this would be quite difficult because of recursion. However, it is not so hard.
+
+11.
+Task: Edit the method buildOneField (in FieldBuilder) that calls buildArrayField at proper time to handle array fields.
+Estimated Time: 20 min
+Target Deadline: Jan 31
+Actual Time: 20 min
+Actual Delivery: Jan 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Just takes some time to do the editing.
+
+12. 
+Task: Add a method buildAddX (in MethodBuilder) that takes a string (name of an array field "X") and generates source code for "addX".
+Estimated Time: 30 min
+Target Deadline: Jan 31
+Actual Time: 20 min
+Actual Delivery: Jan 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Just call "add()" method of ArrayList.
+
+13. 
+Task: Add a method buildNumX (in MethodBuilder) that takes a string (name of an array field "X") and generates source code for "numX".
+Estimated Time: 20 min
+Target Deadline: Jan 31
+Actual Time: 10 min
+Actual Delivery: Jan 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Same as above, but calls "size()".
+
+14. 
+Task: Write a class ConstructorBuilder, which will generate source code of constructors.
+Estimated Time: 10 min
+Target Deadline: Jan 31
+Actual Time: 5 min
+Actual Delivery: Han 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Easy.
+
+15. 
+Task: Add a method buildConstructor (in ConstructorBuilder) that generates source code of constructors for classes with array fields.
+Estimated Time: 1 hour
+Target Deadline: Feb 1
+Actual Time: 1 hour
+Actual Delivery: Jan 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Takes some time to detect the array fields.
+
+16. 
+Task: Add a method getSourceCode (in ClassBuilder) that takes a string (name of a class) and generates complete source code for this class.
+Estimated Time: 30 min
+Target Deadline: Feb 1
+Actual Time: 20 min
+Actual Delivery: Jan 31
+Commit ID: 9e49581834ca45637e69f8e0427e8ddd584f0b2b
+Comments: Just call my other functions. Later I will add some other things like "buildToJSON".
+
+17. 
+Task: Add a method createAllClasses (in ClassBuilder) that takes a string (basepath) and creates one file per class.
+Estimated Time: 30 min
+Target Deadline: Feb 1
+Actual Time: 20 min
+Actual Delivery: Feb 1
+Commit ID: 4d78aa0acb2758c6f981393811ffe1876780d289
+Comments: Just use another writer class to generate JAVA files.
+
+18.
+Task: Write a class ToJSONBuilder, which will generate source code for serialization.
+Estimated Time: 10 min
+Target Deadline: Feb 3
+Actual Time: 5 min
+Actual Delivery: Feb 3
+Commit ID: 452c1b8dfda01c68356e3aa21008bd2959acaae4
+Comments: Easy.
+
+19.
+Task: Add a method buildToJSONHelper (in ToJSONBuilder) that takes a HashMap and creates a helper function for toJSON.
+Estimated Time: 5 hours
+Target Deadline: Feb 3
+Actual Time: 7 hours
+Actual Delivery: Feb 3
+Commit ID: 452c1b8dfda01c68356e3aa21008bd2959acaae4
+Comments: This takes quite a long time. Actually I spend a long time to understand what my code should generate. Finally I decide to write a helper method in each class to do the "recursion" (actually DFS) work. Wirting a piece of code to generate some code that can generate objects is quite confusing...
+
+20.
+Task: Add a method buildToJSON (in ToJSONBuilder) that generates source code for toJSON (serialization).
+Estimated Time: 5 hours
+Target Deadline: Feb 3
+Actual Time: 2 hours
+Actual Delivery: Feb 3
+Commit ID: 452c1b8dfda01c68356e3aa21008bd2959acaae4
+Comments: This contains little work but a lot of thoughts. It is really hard to understand where I should put the HashMap.
+
+21.
+Task: Write a class DeserializerBuilder, which will generate source code of Deserializer.
+Estimated Time: 10 min
+Target Deadline: Feb 4
+Actual Time: 5 min
+Actual Delivery: Feb 5
+Commit ID: d111e014111f8a41342b236462c9ac07ee2adfb2
+Comments: Easy.
+
+22.
+Task: Add a method buildDeserializer (in DeserializerBuilder) that takes a JSONObject and generates source code of each Deserializer
+Estimated Time: 4 hours
+Target Deadline: Feb 4
+Actual Time: 5 hours
+Actual Delivery: Feb 5
+Commit ID: d111e014111f8a41342b236462c9ac07ee2adfb2
+Comments: I thought this would be not so difficult once I realized toJSON. However, it also takes some time to make the logic clear.
+
+23.
+Task: Debug
+Estimated Time: 100 years
+Target Deadline: the next century
+Actual Time: Quite a long time...
+Actual Delivery: The last day?
+Commit ID: ...
+Comments: There is always one bug (the next bug).

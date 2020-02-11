@@ -1,0 +1,18 @@
+1. The serialization and deserialization parts are really difficult tasks. I underestimated time for these two because I really did not know how long I would take at first. Actually these took me a long time to understand what my code should generate.
+
+2. I met my deadlines in most parts. However, during the process, I discovered that some other things were necessary. So I added those parts to my plan and worked on them. I left some extra time for this at first, so it was not a big problem for me.
+
+3.
+(1) Generating code of other languages is a big change. I need to edit some of my classes but not all. However, it is still a little difficult.
+(2) I can just change/add several classes and read XML to a string I need. The other classes will not be changed. So this can be done in a short time.
+(3) I can also keep my core classes unchanged and only add some classes for input conversion. So I think it is not a big deal.
+
+4. OOP in JAVA is a lot more important than C++. I can always use functions in C++. However, in JAVA, creating a new classes is definitely a better choice. I separate my code into more than 10 parts, each of which is realized by a class. This is easy to add new features and also to make abstraction hierarchy. Abstraction makes the task a lot easier than ust writing all things in ClassBuilder. If I know everything at first, there are not many things different I would do. This is because I have already followed the rules of OOP. The most important thing we learn from class is abstraction, and this is greatly helpful. In addition, breaking things into parts is also useful.
+
+5. Planning is really important. Other than just filling the plan at last to finsh the "homework", I updated my plan in the process, kept adding new parts, and edited it frequently. This helped me to have a clear picture of the whole process. In addition, another important thing is "starting as soon as possible". We need extra time to deal with unexpected situations. If we do not have enough time, it will be terrible.
+
+
+
+Some thoughts:
+  I am quite lucky because I started working on this project early. During the process I encountered many unexpected problems. By doing so, I could extend my expected deadline instead of reaching the real deadline. However, this project took me much longer time than I thought, so maybe I need to make plans more carefully from now.
+  Another thing is that abstraction is quite useful in JAVA, and also simpler than C++. I should learn more about good OOP design principles.
